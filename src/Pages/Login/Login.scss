@@ -1,0 +1,95 @@
+.login__page {
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(65,105,225,1) 0%, rgba(156,175,208,1) 50%, rgba(251,248,190,1) 100%);
+
+
+    &-container {
+        transform: translateY(50%);
+        background: rgba( 255, 255, 255, 0.3 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        width: 16.25rem;
+        height: 25rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        
+        &__img {
+            height: 6.25rem ;
+            width: 6.25rem;
+        }
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            &-item {
+                width: 13.75rem;
+                padding: .3125rem;
+                border-radius: .625rem;
+                background-color: rgba( 255, 255, 255, 0.3 );
+                display: flex;
+                gap: .625rem;
+
+                &-img {
+                    height: 1.25rem;
+                    width: 1.25rem;
+                }
+
+                &__email {
+                    border: none;
+                    background-color: transparent;
+                    height: 1.25rem;
+
+                    &::placeholder {
+                        color: black;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                &__password {
+                    border: none;
+                    background-color: transparent;
+                    height: 1.25rem;
+
+                    &::placeholder {
+                        color: black;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            &__sign-in {
+
+                &__button {
+                    width: 13.75rem;
+                    height: 1.875rem;
+                    border: none;
+                    border-radius: 1.25rem;
+                    color: white;
+                    background-color: black;
+                    padding: .3125rem
+                }
+            }
+        }
+
+        &__footer {
+            padding-top: 1rem;
+            &-login {
+                text-decoration: none;
+                color: #6571b0;
+            }
+        }
+    }
+}
