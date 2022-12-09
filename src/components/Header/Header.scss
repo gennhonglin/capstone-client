@@ -1,0 +1,47 @@
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__list {
+        position: relative;
+        display: flex;
+        gap: 1.5625rem;
+        padding-left: 0;
+
+        &-item {
+            position: relative;
+            list-style: none;
+            width: 1.875rem;
+            height: 1.875rem;
+            background: #fff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 60px;
+            transition: 0.5s;
+
+            &:hover {
+                width: 80px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                border-radius: 60px;
+                background: linear-gradient(45deg, #000, #999);
+                opacity: 0;
+                transition: 0.5s;
+            }
+
+            &:hover::before {
+                opacity: 1;
+            }
+        }
+
+    }
+
+}

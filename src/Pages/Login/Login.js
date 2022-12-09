@@ -52,7 +52,7 @@ function Login() {
                 </form>
                 <div className="login__page-container__footer">
                     <span>Don't have an account? <Link className="login__page-container__footer-login" to={"/signup"}>Create an Account</Link></span>
-                    <span>Continue as<Link className="login__page-container__footer-guest" to={"/homepage"}>Guest</Link></span>
+                    <span>Continue as <Link className="login__page-container__footer-guest" to={"/homepage"}>Guest</Link></span>
                 </div>
             </div>
         </div>
