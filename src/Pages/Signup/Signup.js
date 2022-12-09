@@ -2,12 +2,14 @@ import "./Signup.scss";
 import Volleyball from "../../assets/icons/volleyball.png";
 import Email from "../../assets/icons/mail-outline.svg";
 import Password from "../../assets/icons/lock-closed-outline.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useRef } from "react";
+import axios from "axios";
 
 
 function Signup() {
     const form = useRef();
+    let history = useNavigate();
 
     const newUser = (e) => {
         e.preventDefault();
@@ -18,9 +20,12 @@ function Signup() {
                 password: form.current.password.value
             }
             
-            console.log(newUser);
+            axios.post('http://localhost:8080/player', newUser);
+        
+            history("/login");
+  
         } else {
-            console.log("false");
+            alert("false");
         }
 
     }
@@ -45,7 +50,7 @@ function Signup() {
                         <input type="password" name="confirm" className="signup__container__form-item__password-confirm" placeholder="Confirm Password" />
                     </div>
                     <div className="signup__page-container__form__sign-up">
-                        <button className="signup__container__form__sign-up__button">Sign Up</button>
+                        <button type="submit" className="signup__container__form__sign-up__button">Sign Up</button>
                     </div>
                 </form>
 
