@@ -2,6 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(174,189,202,0.5);
+    border-radius: 5px;
 
     &__list {
         padding-left: 1rem;
@@ -16,7 +18,7 @@
             width: 2.1875rem;
             height: 2.1875rem;
             background: #fff;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
             cursor: pointer;
             display: flex;
             justify-content: center;
@@ -34,7 +36,7 @@
                 position: absolute;
                 inset: 0;
                 border-radius: 60px;
-                background: linear-gradient(45deg, rgba(120,149,178,1), rgba(245,239,230,1));
+                // background: linear-gradient(45deg, rgba(120,149,178,1), rgba(245,239,230,1));
                 opacity: 0;
                 transition: 0.5s;
             }
@@ -67,7 +69,6 @@
             &__title {
                 font-size: .75rem;
                 text-transform: uppercase;
-                letter-spacing: 0.1em;
                 transition: 0.5s;
                 transition-delay: 0s;
                 transform: scale(0);
