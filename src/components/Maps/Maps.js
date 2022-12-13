@@ -2,20 +2,15 @@ import React, { useEffect, useRef, useState } from 'react';
 import './Maps.scss';
 import maplibregl, { Map } from 'maplibre-gl';
 
-const Maps = () => {
+const Maps = ({location}) => {
     const mapContainer = useRef(null);
-    const initialState = {
-        lng: -123.116226,
-        lat: 49.246292,
-        zoom: 10,
-    };
 
     const creeksideTest = {
         lng: -123.0954014,
         lat: 49.2671088,
         zoom: 15
     }
-    const [displayMap, setDisplayMap] = useState(initialState);
+    const [displayMap, setDisplayMap] = useState(location);
 
 
     useEffect(() => {
