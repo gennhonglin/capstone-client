@@ -3,14 +3,15 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(174,189,202,0.5);
-    border-radius: 5px;
 
     &__list {
+        width: 100%;
         padding-left: 1rem;
         padding-right: 1rem;
         position: relative;
         display: flex;
-        gap: 1.5625rem;
+        justify-content: space-between;
+        
 
         &-item {
             position: relative;
