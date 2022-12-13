@@ -1,0 +1,49 @@
+.post-form {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    transform: translateY(50%);
+    
+
+    &__container {
+        height: 25rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        
+        &__header {
+            display: flex;
+
+            &-img {
+                height: 3.125rem;
+                width: 3.125rem;
+
+            }
+
+            &-title {
+                margin: auto;
+            }
+        }
+
+        &__form {
+            height: 18.75rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            &-input {
+                width: 100%;
+            }
+
+            &-button {
+                width: 100%;
+            }
+        }
+    }
+
+}
