@@ -2,16 +2,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(174,189,202,0.5);
+    background-color: rgba(174,189,202,1);
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
 
     &__list {
+        margin: 0;
         width: 100%;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding: .625rem;
         position: relative;
         display: flex;
         justify-content: space-between;
-        
 
         &-item {
             position: relative;

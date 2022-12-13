@@ -11,18 +11,22 @@ function Location() {
         lat: 49.246292,
         zoom: 10,
     };
+
     const [location, setLocation] = useState(initialState);
 
+    const handleCallBack = (childData) => {
+        setLocation(childData);
+    }
 
     return (
         <div className="location">
-            <Header />
             <div className="location__maps">
                 <Maps location={location} />
             </div>
             <div className="location__posts">
-                <Posts />
+                <Posts addressCallBack = {handleCallBack} />
             </div>
+            <Header className="location__nav" />
         </div>
     )
 }

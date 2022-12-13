@@ -4,16 +4,11 @@ import maplibregl, { Map } from 'maplibre-gl';
 
 const Maps = ({location}) => {
     const mapContainer = useRef(null);
-
-    const creeksideTest = {
-        lng: -123.0954014,
-        lat: 49.2671088,
-        zoom: 15
-    }
     const [displayMap, setDisplayMap] = useState(location);
 
 
     useEffect(() => {
+        setDisplayMap(location);
         const myAPIKey = '5ace1cbbc096410f83720c357cca790f';
         const mapStyle =
             'https://maps.geoapify.com/v1/styles/osm-carto/style.json';
@@ -41,7 +36,7 @@ const Maps = ({location}) => {
           .setLngLat([displayMap.lng, displayMap.lat])
           .addTo(map);
 
-    }, []);
+    }, [location]);
 
     
 
