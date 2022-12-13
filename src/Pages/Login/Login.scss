@@ -86,7 +86,15 @@
 
         &__footer {
             padding-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
             &-login {
+                text-decoration: none;
+                color: #6571b0;
+            }
+
+            &-guest {
                 text-decoration: none;
                 color: #6571b0;
             }

@@ -1,0 +1,109 @@
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(174,189,202,1);
+    overflow: scroll;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+
+    &__list {
+        margin: 0;
+        width: 100%;
+        padding: .625rem;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        &-item {
+            position: relative;
+            list-style: none;
+            width: 2.1875rem;
+            height: 2.1875rem;
+            background: #fff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 60px;
+            transition: 0.5s;
+
+            &:hover {
+                width: 70px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                border-radius: 60px;
+                // background: linear-gradient(45deg, rgba(120,149,178,1), rgba(245,239,230,1));
+                opacity: 0;
+                transition: 0.5s;
+            }
+
+            &:hover::before {
+                opacity: 1;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                border-radius: 3.75rem;
+                background: linear-gradient(45deg, rgba(120,149,178,1), rgba(245,239,230,1));
+                transition: 0.5s;
+                filter: blur(15px);
+                z-index: -1;
+                opacity: 0;
+            }
+
+            &:hover::after {
+                opacity: 0.5;
+            }
+
+            &__span {
+                position: absolute;
+            }
+
+            &__title {
+                font-size: .75rem;
+                text-transform: uppercase;
+                transition: 0.5s;
+                transition-delay: 0s;
+                transform: scale(0);
+
+                &-link {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+
+            
+            &:hover &__icon {
+                transform: scale(0);
+                transition-delay: 0s;
+            }
+
+            &:hover &__title {
+                    transform: scale(1);
+                    transition-delay: 0.25s;
+            }
+
+            &__icon {
+                height: 1.25rem;
+                width: 1.25rem;
+                transition: 0.5s;
+                transition-delay: 0.25s;
+            }
+
+        }
+
+    }
+
+}
