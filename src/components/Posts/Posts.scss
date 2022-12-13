@@ -49,7 +49,18 @@
             padding-right: 1rem;
 
             &__details {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
                 width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-evenly;
+                gap: 1rem;
+
+                &-title {
+                    margin: 0;
+                }
             }
 
             &__level {

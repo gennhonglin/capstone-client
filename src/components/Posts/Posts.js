@@ -47,9 +47,9 @@ function Posts({ addressCallBack }) {
                     return (
                         <div onClick={() => { postLocation(posts) }} className="posts__location-post" key={posts.id}>
                             <div className="posts__location-post__details">
-                                <h3>{posts.location_name}</h3>
-                                <h3>{posts.address}</h3>
-                                <h3>{posts.city}</h3>
+                                <h3 className="posts__location-post__details-title">{posts.location_name}</h3>
+                                <h3 className="posts__location-post__details-title">{posts.address}</h3>
+                                <h3 className="posts__location-post__details-title">{posts.city}</h3>
                             </div>
                             <div className="posts__location-post__level">
                                 <Link className="posts__location-post__level-link"><img alt="arrow icon" src={Arrow}/></Link>
