@@ -6,9 +6,35 @@
     padding-left: 1rem;
     background-color: #2E496A;
     padding-bottom: 4.5rem;
-    
+
 
     &__post {
-        background-color: white;
+        background: rgb(255, 255, 255);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(243, 230, 230, 0.3);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(231, 169, 85, 0.3);
+        &__details {
+            height: 5rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-evenly;
+
+            &-info {
+                margin: 0;
+                color: #2E496A;
+                font-size: 1rem;
+            }
+
+            &-date {
+                margin: 0;
+                color: #2E496A;
+                font-size: .75rem;
+            }
+        }
     }
 }

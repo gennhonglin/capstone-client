@@ -8,8 +8,12 @@ import './PostDetail.scss';
 
 
 function PostDetail() {
+    
     const { id } = useParams();
-    const image = sessionStorage.getItem("image");
+    let image = sessionStorage.getItem("image");
+    if(image === null) {
+        image = true;
+    }
 
     return (
         <div className='single-post'>

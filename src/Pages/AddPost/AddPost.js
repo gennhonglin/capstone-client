@@ -3,7 +3,10 @@ import PostForm from "../../components/PostForm/PostForm";
 import "./AddPost.scss";
 
 function AddPost() {
-    const image = sessionStorage.getItem("image");
+    let image = sessionStorage.getItem("image");
+    if(image === null) {
+        image = true;
+    }
 
     return(
         <div className="add-post">

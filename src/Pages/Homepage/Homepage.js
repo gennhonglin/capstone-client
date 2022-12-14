@@ -4,11 +4,12 @@ import jwt_decode from "jwt-decode";
 
 function Homepage() {
         const token = sessionStorage.getItem("token");
-        const image = sessionStorage.getItem("image");
+        let image = sessionStorage.getItem("image");
         let display;
         let username;
-        if(token === "guest") {
+        if(token === "guest" || token === null) {
             username = "Guest";
+            image = true;
         } else {
             display = jwt_decode(token);
             username = display.data.email;

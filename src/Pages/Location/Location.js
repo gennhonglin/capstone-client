@@ -6,7 +6,11 @@ import { useState } from "react";
 
 
 function Location() {
-    const image = sessionStorage.getItem("image");
+    let image = sessionStorage.getItem("image");
+    if(image === null) {
+        image = true;
+    }
+
     const initialState = {
         lng: -123.116226,
         lat: 49.246292,
