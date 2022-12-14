@@ -5,8 +5,24 @@ import Chat from "../../assets/icons/chatbox-outline.svg";
 import Location from "../../assets/icons/map-outline.svg";
 import Skills from "../../assets/icons/book-outline.svg";
 import Profile from "../../assets/icons/person-circle-outline.svg";
+import Mohan from "../../assets/images/Mohan-muruge.jpg";
 
-function Header() {
+function Header({image}) {
+    let navDisplay;
+
+    if(image) {
+        navDisplay = <li className="navigation__list-item">
+        <span className="navigation__list-item__span"><img className="navigation__list-item__mohan" src={Mohan} alt="Profile icon" /></span>
+        <span className="navigation__list-item__span navigation__list-item__title">Profile</span>
+        </li>;
+    } else {
+        navDisplay = <li className="navigation__list-item">
+        <span className="navigation__list-item__span"><img className="navigation__list-item__icon" src={Profile} alt="Profile icon" /></span>
+        <span className="navigation__list-item__span navigation__list-item__title">Profile</span>
+        </li>;
+    }
+
+
     return(
         <nav className="navigation">
             <ul className="navigation__list">
@@ -26,10 +42,13 @@ function Header() {
                     <span className="navigation__list-item__span"><img className="navigation__list-item__icon" src={Location} alt="Location icon" /></span>
                     <span className="navigation__list-item__span navigation__list-item__title"><Link className="navigation__list-item__title-link" to={'/location'}>Location</Link></span>
                 </li>
-                <li className="navigation__list-item">
-                    <span className="navigation__list-item__span"><img className="navigation__list-item__icon" src={Profile} alt="Profile icon" /></span>
+
+                {/* <li className="navigation__list-item">
+                    <span className="navigation__list-item__span"><img className="navigation__list-item__icon" src={Mohan} alt="Profile icon" /></span>
                     <span className="navigation__list-item__span navigation__list-item__title">Profile</span>
-                </li>
+                </li> */}
+
+                {navDisplay}
 
             </ul>
         </nav>

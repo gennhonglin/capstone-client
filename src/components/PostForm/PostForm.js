@@ -19,13 +19,13 @@ function PostForm() {
             level: form.current.level.value,
             registration: form.current.registration.value
         }
-        
+
         axios.post('http://localhost:8080/location', newPost)
-        .then((response) => {
-            if(response.status === 201) {
-                Navigate(-1);
-            }
-        })
+            .then((response) => {
+                if (response.status === 201) {
+                    Navigate(-1);
+                }
+            })
 
 
 
@@ -40,16 +40,27 @@ function PostForm() {
                     <h2 className="post-form__container__header-title">Add New Place</h2>
                 </div>
                 <form onSubmit={newPost} className="post-form__container__form" ref={form}>
-                    <label className="post-form__container__form-label">Location Name:</label>
-                    <input type="text" name="name" className="post-form__container__form-input"></input>
-                    <label className="post-form__container__form-label">Location Address:</label>
-                    <input type="text" name="address" className="post-form__container__form-input"></input>
-                    <label className="post-form__container__form-label">City:</label>
-                    <input type="text" name="city" className="post-form__container__form-input"></input>
-                    <label className="post-form__container__form-label">Level:</label>
-                    <input type="text" name="level" className="post-form__container__form-input"></input>
-                    <label className="post-form__container__form-label">Registration URL:</label>
-                    <input type="text" name="registration" className="post-form__container__form-input"></input>
+                    <div className="post-form__container__form-container">
+                        <input type="text" name="name" className="post-form__container__form-container__input" required></input>
+                        <span className="post-form__container__form-container__label">Location Name:</span>
+                    </div>
+                    <div className="post-form__container__form-container">
+                        <input type="text" name="address" className="post-form__container__form-container__input" required></input>
+                        <span className="post-form__container__form-container__label">Location Address:</span>
+                    </div>
+                    <div className="post-form__container__form-container">
+                        <input type="text" name="city" className="post-form__container__form-container__input" required></input>
+                        <span className="post-form__container__form-container__label">City:</span>
+                    </div>
+                    <div className="post-form__container__form-container">
+                        <input type="text" name="level" className="post-form__container__form-container__input" required></input>
+                        <span className="post-form__container__form-container__label">Level:</span>
+                    </div>
+                    <div className="post-form__container__form-container">
+                        <input type="text" name="registration" className="post-form__container__form-container__input" required></input>
+                        <span className="post-form__container__form-container__label">Registration URL:</span>
+                    </div>
+
                     <button type="submit" className="post-form__container__form-button">Submit</button>
                 </form>
             </div>
