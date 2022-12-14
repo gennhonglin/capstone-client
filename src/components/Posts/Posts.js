@@ -15,6 +15,7 @@ function Posts({ addressCallBack }) {
                 setLocation(response.data);
             })
     }, [])
+    
 
     const postLocation = (locations) => {
         //Convert address to long and 
@@ -48,12 +49,9 @@ function Posts({ addressCallBack }) {
                         <div onClick={() => { postLocation(posts) }} className="posts__location-post" key={posts.id}>
                             <div className="posts__location-post__details">
                                 <h3 className="posts__location-post__details-title">{posts.location_name}</h3>
-                                <h3 className="posts__location-post__details-title">{posts.level}</h3>
+                                <h3 className="posts__location-post__details-level">{posts.level}</h3>
                             </div>
-    
                             <Link to={`/location/${posts.id}`} className="posts__location-post__link"><img alt="arrow icon" src={Arrow}/></Link>
-              
-                            
                         </div>);
                 })}
             </div>

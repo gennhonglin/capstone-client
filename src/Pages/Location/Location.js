@@ -26,7 +26,7 @@ function Location() {
             <div className="location__posts">
                 <Posts addressCallBack = {handleCallBack} />
             </div>
-            <Header className="location__nav" />
+            <Header/>
         </div>
     )
 }
