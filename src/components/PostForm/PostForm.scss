@@ -1,7 +1,7 @@
 .post-form {
     padding-right: 1rem;
     padding-left: 1rem;
-    transform: translateY(50%);
+    transform: translateY(40%);
 
 
     &__container {
@@ -40,11 +40,12 @@
             align-items: flex-start;
 
             &-container {
+                display: flex;
                 position: relative;
                 width: 100%;
 
                 &__input {
-                    width: 90%;
+                    width: 100%;
                     padding: .625rem .9375rem;
                     border: 1px solid #747a81;
                     background: #fff;
