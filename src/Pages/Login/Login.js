@@ -2,7 +2,7 @@ import "./Login.scss";
 import Volleyball from "../../assets/icons/volleyball.png";
 import Email from "../../assets/icons/mail-outline.svg";
 import Password from "../../assets/icons/lock-closed-outline.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import axios from "axios";
 
@@ -10,7 +10,7 @@ function Login() {
 
     //Need useState for authentication true or not
 
-
+    const navigate = useNavigate();
     const form = useRef();
 
     const loginUser = (e) => {
@@ -23,10 +23,20 @@ function Login() {
 
         axios.post('http://localhost:8080/player/login', loginUser)
         .then((response) => {
-            console.log(response);
-            sessionStorage.setItem('token', response.data);
+            if(response.status === 201) {
+                sessionStorage.setItem('token', response.data);
+                sessionStorage.setItem('image', false);
+                navigate("/Homepage");
+            }
+            
         })
     
+    }
+
+    const guestUser = (e) => {
+
+        sessionStorage.setItem('token', "guest");
+        sessionStorage.setItem('image', true);
     }
 
     //Create a function that displays authentication true or not
@@ -53,7 +63,7 @@ function Login() {
                 </form>
                 <div className="login__page-container__footer">
                     <span>Don't have an account? <Link className="login__page-container__footer-login" to={"/signup"}>Create an Account</Link></span>
-                    <span>Continue as <Link className="login__page-container__footer-guest" to={"/homepage"}>Guest</Link></span>
+                    <span>Continue as <Link onClick={guestUser} className="login__page-container__footer-guest" to={"/homepage"}>Guest</Link></span>
                 </div>
             </div>
         </div>

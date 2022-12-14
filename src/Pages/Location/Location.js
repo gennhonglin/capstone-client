@@ -6,6 +6,7 @@ import { useState } from "react";
 
 
 function Location() {
+    const image = sessionStorage.getItem("image");
     const initialState = {
         lng: -123.116226,
         lat: 49.246292,
@@ -26,7 +27,7 @@ function Location() {
             <div className="location__posts">
                 <Posts addressCallBack = {handleCallBack} />
             </div>
-            <Header/>
+            <Header image = {image}/>
         </div>
     )
 }

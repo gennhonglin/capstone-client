@@ -9,10 +9,9 @@ function SinglePost({id}) {
     useEffect( () => {
         axios.get(`http://localhost:8080/location/${id}`)
         .then((response) => {
-            console.log(response.data);
             setPostData(response.data);
         })
-    }, [])
+    }, [id])
 
 
     return (

@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import CommentList from '../../components/CommentList/CommentList';
 import Comments from '../../components/Comments/Comments';
 import Header from '../../components/Header/Header';
 import Maps from '../../components/Maps/Maps';
@@ -8,6 +9,7 @@ import './PostDetail.scss';
 
 function PostDetail() {
     const { id } = useParams();
+    const image = sessionStorage.getItem("image");
 
     return (
         <div className='single-post'>
@@ -15,9 +17,12 @@ function PostDetail() {
                 <SinglePost id={id}/>
             </div>
             <div className='single-post__comments'>
-                <Comments />
+                <Comments post_id = {id} />
             </div>
-            <Header />
+            <div className='single-post__list'>
+                <CommentList id = {id} />
+            </div>
+            <Header image = {image}/>
         </div>
     )
 }

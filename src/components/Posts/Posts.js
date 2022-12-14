@@ -46,12 +46,12 @@ function Posts({ addressCallBack }) {
             <div className="posts__location">
                 {location.map((posts) => {
                     return (
-                        <div onClick={() => { postLocation(posts) }} className="posts__location-post" key={posts.id}>
+                        <div onClick={() => { postLocation(posts) }} className="posts__location-post" key={posts.post_id}>
                             <div className="posts__location-post__details">
                                 <h3 className="posts__location-post__details-title">{posts.location_name}</h3>
                                 <h3 className="posts__location-post__details-level">{posts.level}</h3>
                             </div>
-                            <Link to={`/location/${posts.id}`} className="posts__location-post__link"><img alt="arrow icon" src={Arrow}/></Link>
+                            <Link to={`/location/${posts.post_id}`} className="posts__location-post__link"><img alt="arrow icon" src={Arrow}/></Link>
                         </div>);
                 })}
             </div>
