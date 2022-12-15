@@ -6,16 +6,24 @@ import { useNavigate } from "react-router-dom";
 
 function Comments({post_id}) {
     const form = useRef();
-    const Navigate = useNavigate();
 
     const newComment = (e) => {
         e.preventDefault();
+        const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+        let commentDate = Date.now()
+        let date = new Date(commentDate);
+        let months  = date.getMonth();
+        let day  = date.getDate();
+        let year = date.getFullYear();
+        let combinedDate = month[months] + " " + day + " " + year;
+
 
         const newComment = {
-            player_id: 1,
+            player_id: 2,
             post_id: post_id,
             comment: form.current.comments.value,
-            date: Date.now()
+            date: combinedDate
         }
         
         axios.post('http://localhost:8080/comment', newComment)

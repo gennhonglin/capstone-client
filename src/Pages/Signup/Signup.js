@@ -1,5 +1,6 @@
 import "./Signup.scss";
 import Volleyball from "../../assets/icons/volleyball.png";
+import LoginSVG from "../../assets/images/volleyball.svg";
 import Email from "../../assets/icons/mail-outline.svg";
 import Password from "../../assets/icons/lock-closed-outline.svg";
 import { Link, useNavigate } from "react-router-dom";
@@ -14,16 +15,16 @@ function Signup() {
     const newUser = (e) => {
         e.preventDefault();
 
-        if(form.current.password.value === form.current.confirm.value) {
+        if (form.current.password.value === form.current.confirm.value) {
             const newUser = {
                 email: form.current.email.value,
                 password: form.current.password.value
             }
-            
+
             axios.post('http://localhost:8080/player', newUser);
-        
+
             history("/login");
-  
+
         } else {
             alert("false");
         }
@@ -31,6 +32,10 @@ function Signup() {
     }
     return (
         <div className="signup">
+
+            <div className="signup-image">
+                <img className="signup-image__svg" alt="volleyball-login" src={LoginSVG} />
+            </div>
             <div className="signup__container">
                 <img src={Volleyball} alt="volleyball icon" className="signup__container-img" />
 

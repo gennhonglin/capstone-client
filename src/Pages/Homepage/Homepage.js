@@ -1,6 +1,5 @@
 import "./Homepage.scss";
 import Header from "../../components/Header/Header";
-import jwt_decode from "jwt-decode";
 import DisplayUser from "../../components/DisplayUser/DisplayUser";
 
 function Homepage() {
