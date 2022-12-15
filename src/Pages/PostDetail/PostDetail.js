@@ -5,10 +5,11 @@ import Header from '../../components/Header/Header';
 import Maps from '../../components/Maps/Maps';
 import SinglePost from '../../components/SinglePost/SinglePost';
 import './PostDetail.scss';
+import DisplayUser from "../../components/DisplayUser/DisplayUser";
 
 
 function PostDetail() {
-    
+    const token = sessionStorage.getItem("token");
     const { id } = useParams();
     let image = sessionStorage.getItem("image");
     if(image === null) {
@@ -17,6 +18,7 @@ function PostDetail() {
 
     return (
         <div className='single-post'>
+            <DisplayUser token = {token} />
             <div className='single-post__posts'>
                 <SinglePost id={id}/>
             </div>

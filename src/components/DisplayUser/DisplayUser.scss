@@ -1,0 +1,23 @@
+.display-user {
+    width: 100%;
+    background-color: rgba(174,189,202,1);;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding: .3125rem 1rem;
+
+        &-player {
+            margin: 0;
+            color: #01539D;
+            font-size: .875rem;
+        }
+
+        &-logout {
+            text-decoration: none;
+            color: #01539D;
+            font-weight: 600;
+            font-size: .875rem;
+        }
+
+    }
+}

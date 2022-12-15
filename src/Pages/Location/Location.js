@@ -3,9 +3,11 @@ import "./Location.scss";
 import Maps from "../../components/Maps/Maps";
 import Posts from "../../components/Posts/Posts";
 import { useState } from "react";
+import DisplayUser from "../../components/DisplayUser/DisplayUser";
 
 
 function Location() {
+    const token = sessionStorage.getItem("token");
     let image = sessionStorage.getItem("image");
     if(image === null) {
         image = true;
@@ -25,6 +27,7 @@ function Location() {
 
     return (
         <div className="location">
+            <DisplayUser token = {token} />
             <div className="location__maps">
                 <Maps location={location} />
             </div>
