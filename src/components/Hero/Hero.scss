@@ -1,0 +1,22 @@
+.hero {
+
+    &-gif {
+        position: relative;
+        opacity: 0.5;
+        width: 100%;
+        
+    }
+
+    &__title {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        position: absolute;
+        text-align: left;
+        position: relative;
+        color: white;
+        width: 50%;
+        margin: 0;
+        bottom: 125px;
+        font-size: 1rem;
+    }
+}

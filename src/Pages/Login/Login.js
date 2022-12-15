@@ -23,15 +23,15 @@ function Login() {
         }
 
         axios.post('http://localhost:8080/player/login', loginUser)
-        .then((response) => {
-            if(response.status === 201) {
-                sessionStorage.setItem('token', response.data);
-                sessionStorage.setItem('image', false);
-                navigate("/Homepage");
-            }
-            
-        })
-    
+            .then((response) => {
+                if (response.status === 201) {
+                    sessionStorage.setItem('token', response.data);
+                    sessionStorage.setItem('image', false);
+                    navigate("/Homepage");
+                }
+
+            })
+
     }
 
     const guestUser = (e) => {
@@ -47,11 +47,13 @@ function Login() {
     return (
         <div className="login__page">
             <div className="login__page-image">
-                <img className="login__page-image__svg" alt="volleyball-login" src={LoginSVG}/>
+                <img className="login__page-image__svg" alt="volleyball-login" src={LoginSVG} />
             </div>
             <div className="login__page-container">
-                <img alt="Volleyball-Icon" className="login__page-container__img" src={Volleyball} />
-                <h1 className="login__page-container__title">Sign In</h1>
+                <div className="login__page-container-header">
+                    <img alt="Volleyball-Icon" className="login__page-container-header__img" src={Volleyball} />
+                    <h1 className="login__page-container-header__title">Sign In</h1>
+                </div>
                 <form onSubmit={loginUser} className="login__page-container__form" ref={form} >
                     <div className="login__page-container__form-item">
                         <img src={Email} alt="Email Icon" className="login__page-container__form-item-img" />
@@ -64,11 +66,12 @@ function Login() {
                     <div className="login__page-container__form__sign-in">
                         <button type="submit" className="login__page-container__form__sign-in__button">Sign in</button>
                     </div>
+
+                    <div className="login__page-container__form__footer">
+                        <span>Don't have an account? <Link className="login__page-container__form__footer-login" to={"/signup"}>Create an Account</Link></span>
+                        <span>Continue as <Link onClick={guestUser} className="login__page-container__form__footer-guest" to={"/homepage"}>Guest</Link></span>
+                    </div>
                 </form>
-                <div className="login__page-container__footer">
-                    <span>Don't have an account? <Link className="login__page-container__footer-login" to={"/signup"}>Create an Account</Link></span>
-                    <span>Continue as <Link onClick={guestUser} className="login__page-container__footer-guest" to={"/homepage"}>Guest</Link></span>
-                </div>
             </div>
         </div>
     );
