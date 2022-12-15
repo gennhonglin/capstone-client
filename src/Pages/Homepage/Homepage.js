@@ -1,6 +1,7 @@
 import "./Homepage.scss";
 import Header from "../../components/Header/Header";
 import DisplayUser from "../../components/DisplayUser/DisplayUser";
+import Hero from "../../components/Hero/Hero";
 
 function Homepage() {
         const token = sessionStorage.getItem("token");
@@ -12,9 +13,9 @@ function Homepage() {
 
 
     return(
-        <div>
+        <div className="homepage">
             <DisplayUser token = {token} />
-            
+            <Hero />
             <Header image = {image}/>
         </div>
     )
