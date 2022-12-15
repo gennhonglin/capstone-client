@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import CommentList from '../../components/CommentList/CommentList';
 import Comments from '../../components/Comments/Comments';
 import Header from '../../components/Header/Header';
-import Maps from '../../components/Maps/Maps';
+//import Maps from '../../components/Maps/Maps';
 import SinglePost from '../../components/SinglePost/SinglePost';
 import './PostDetail.scss';
 import DisplayUser from "../../components/DisplayUser/DisplayUser";
