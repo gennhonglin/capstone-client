@@ -9,13 +9,14 @@ function CommentList({id}) {
     useEffect(() => {
         axios.get(`http://localhost:8080/comment/${id}`)
         .then((response) => {
-
             setList(response.data);
         })
         .catch((err) => {
             console.log(err);
         })
     }, [list])
+
+    //Potentially code a section where if there is no posts something should be displayed to the users that they should be the first to comment
 
 
     return(
