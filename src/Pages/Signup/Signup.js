@@ -37,10 +37,10 @@ function Signup() {
                 <img className="signup-image__svg" alt="volleyball-login" src={LoginSVG} />
             </div>
             <div className="signup__container">
-                <img src={Volleyball} alt="volleyball icon" className="signup__container-img" />
-
-                <h1 className="signup__container-title">Sign Up</h1>
-
+                <div className="signup__container-header">
+                    <img src={Volleyball} alt="volleyball icon" className="signup__container-header__img" />
+                    <h1 className="signup__container-header-title">Sign Up</h1>
+                </div>
                 <form onSubmit={newUser} className="signup__container__form" ref={form}>
                     <div className="signup__container__form-item">
                         <img src={Email} alt="Email Icon" className="signup__container__form-item-img" />
@@ -57,11 +57,12 @@ function Signup() {
                     <div className="signup__page-container__form__sign-up">
                         <button type="submit" className="signup__container__form__sign-up__button">Sign Up</button>
                     </div>
+                    <div className="signup__container__form__footer">
+                        <span>Already have an account? <Link className="signup__container__form__footer-login" to={"/login"}>Login</Link></span>
+                    </div>
                 </form>
 
-                <div className="signup__container__footer">
-                    <span>Already have an account? <Link className="signup__container__footer-login" to={"/login"}>Login</Link></span>
-                </div>
+
             </div>
         </div>
     )
