@@ -14,6 +14,7 @@ function Homepage() {
     return(
         <div>
             <DisplayUser token = {token} />
+            
             <Header image = {image}/>
         </div>
     )
