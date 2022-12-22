@@ -1,11 +1,11 @@
 import "./Login.scss";
 import Volleyball from "../../assets/icons/volleyball.png";
-import LoginSVG from "../../assets/images/volleyball.svg";
 import Email from "../../assets/icons/mail-outline.svg";
 import Password from "../../assets/icons/lock-closed-outline.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import axios from "axios";
+import LoginSVG from "../../components/LoginSVG/LoginSVG";
 
 function Login() {
 
@@ -46,9 +46,7 @@ function Login() {
 
     return (
         <div className="login__page">
-            <div className="login__page-image">
-                <img className="login__page-image__svg" alt="volleyball-login" src={LoginSVG} />
-            </div>
+            <LoginSVG/>
             <div className="login__page-container">
                 <div className="login__page-container-header">
                     <img alt="Volleyball-Icon" className="login__page-container-header__img" src={Volleyball} />

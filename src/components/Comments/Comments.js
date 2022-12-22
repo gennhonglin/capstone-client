@@ -36,7 +36,7 @@ function Comments({post_id}) {
         <div className="comments">
             <form onSubmit={newComment} ref={form} className="comments__form">
                 <textarea type="text" name="comments" className="comments__form-text" placeholder="Comment about what you think"></textarea>
-                <button type="submit" className="comments__form-button">Submit Comment</button>
+                <button type="submit" className="comments__form-button">Submit</button>
             </form>
 
         </div>

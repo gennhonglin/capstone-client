@@ -14,7 +14,7 @@ function CommentList({id}) {
         .catch((err) => {
             console.log(err);
         })
-    }, [id])
+    }, [id, list])
 
     //Potentially code a section where if there is no posts something should be displayed to the users that they should be the first to comment
 
