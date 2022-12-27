@@ -1,11 +1,12 @@
 import "./Signup.scss";
 import Volleyball from "../../assets/icons/volleyball.png";
-import LoginSVG from "../../assets/images/volleyball.svg";
+import Name from "../../assets/icons/person-circle-outline.svg";
 import Email from "../../assets/icons/mail-outline.svg";
 import Password from "../../assets/icons/lock-closed-outline.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import axios from "axios";
+import LoginSVG from "../../components/LoginSVG/LoginSVG";
 
 
 function Signup() {
@@ -18,6 +19,7 @@ function Signup() {
         if (form.current.password.value === form.current.confirm.value) {
             const newUser = {
                 email: form.current.email.value,
+                name: form.current.name.value,
                 password: form.current.password.value
             }
 
@@ -32,10 +34,7 @@ function Signup() {
     }
     return (
         <div className="signup">
-
-            <div className="signup-image">
-                <img className="signup-image__svg" alt="volleyball-login" src={LoginSVG} />
-            </div>
+            <LoginSVG/>
             <div className="signup__container">
                 <div className="signup__container-header">
                     <img src={Volleyball} alt="volleyball icon" className="signup__container-header__img" />
@@ -45,6 +44,10 @@ function Signup() {
                     <div className="signup__container__form-item">
                         <img src={Email} alt="Email Icon" className="signup__container__form-item-img" />
                         <input type="text" name="email" className="signup__container__form-item__email" placeholder="Email" />
+                    </div>
+                    <div className="signup__container__form-item">
+                        <img src={Name} alt="User Icon" className="signup__container__form-item-img" />
+                        <input type="text" name="name" className="signup__container__form-item__email" placeholder="Name" />
                     </div>
                     <div className="signup__container__form-item">
                         <img src={Password} alt="Lock Icon" className="signup__container__form-item-img" />

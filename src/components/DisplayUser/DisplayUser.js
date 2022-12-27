@@ -10,7 +10,7 @@ function DisplayUser({token}) {
         username = "Guest";
     } else {
         display = jwt_decode(token);
-        username = display.data.email;
+        username = display.data.name;
     }
 
 
