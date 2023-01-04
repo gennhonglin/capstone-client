@@ -9,6 +9,8 @@ function Homepage() {
 
         if(token === "guest" || token === null) {
             image = true;
+        } else {
+            image = false;
         }
 
 

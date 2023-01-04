@@ -8,6 +8,8 @@ function AddPost() {
     let image = sessionStorage.getItem("image");
     if(image === null) {
         image = true;
+    } else {
+        image = false;
     }
 
     return(

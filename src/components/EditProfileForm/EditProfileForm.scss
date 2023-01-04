@@ -1,0 +1,118 @@
+.edit__profile-form {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+
+
+    &__container {
+        height: 34.375rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+
+        &__header {
+            display: flex;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+
+            &-img {
+                height: 1.875rem;
+                width: 1.875rem;
+
+            }
+
+            &-title {
+                margin: auto;
+                color: #fff;
+            }
+        }
+
+        &__user-data {
+            &__profile {
+                &-img {
+                    border-radius: 50%;
+                }
+            }
+
+            &__content {
+                &-name {
+                    margin: 0;
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                    color: #fff;
+                    font-size: 1.5625rem;
+                }
+            }
+        }
+
+        &__form {
+            height: 18.75rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+
+            &-container {
+                display: flex;
+                position: relative;
+                width: 100%;
+
+                &__input {
+                    width: 100%;
+                    padding: .625rem .9375rem;
+                    border: 1px solid #747a81;
+                    background: #fff;
+                    border-radius: 1.25rem;
+                    outline: none;
+                    font-size: 1em;
+                    transition: .5s;
+
+                }
+
+                &__label {
+                    position: absolute;
+                    left: 0;
+                    padding: .75rem 1.25rem;
+                    pointer-events: none;
+                    font-size: .875rem;
+                    transition: .5s;
+                    color: #747a81;
+                }
+
+                &__input:valid~&__label,
+                &__input:focus~&__label {
+                    color: #fff;
+                    transform: translateX(8px) translateY(-8px);
+                    font-size: 14px;
+                    padding: 0 .9375rem;
+                    margin-left: 10px;
+                    background: #e9b49b;
+                    border-radius: 1.25rem;
+                    letter-spacing: .1em;
+                }
+
+            }
+
+            &-button {
+                width: 40%;
+                margin-left: .625rem;
+                border: none;
+                padding: .3125rem;
+                border-radius: .625rem;
+                background-color: #eec7b5;
+                color: #36588C;
+                font-size: 1rem;
+                font-weight: 600;
+                box-shadow: 0 8px 32px 0 rgba(254, 220, 184, 0.4);
+            }
+        }
+    }
+
+}
