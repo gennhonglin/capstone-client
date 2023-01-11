@@ -1,11 +1,10 @@
 @use "../../Styles/partials/mixins" as responsive;
 
-.post-form {
+.edit__profile-form {
     padding-right: 1rem;
     padding-left: 1rem;
-    transform: translateY(40%);
+    padding-top: 1rem;
     display: flex;
-
 
     @include responsive.tablet {
         justify-content: center;
@@ -13,9 +12,10 @@
 
 
     &__container {
-        height: 25rem;
+        height: 34.375rem;
         padding-right: 1rem;
         padding-left: 1rem;
+        padding-bottom: 1rem;
         background: rgba(255, 255, 255, 0.25);
         box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
         backdrop-filter: blur(4px);
@@ -45,12 +45,31 @@
             }
         }
 
+        &__user-data {
+            &__profile {
+                &-img {
+                    border-radius: 50%;
+                }
+            }
+
+            &__content {
+                &-name {
+                    margin: 0;
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                    color: #fff;
+                    font-size: 1.5625rem;
+                }
+            }
+        }
+
         &__form {
             height: 18.75rem;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: flex-start;
+            gap: 1rem;
 
             &-container {
                 display: flex;
@@ -103,8 +122,8 @@
                 color: #36588C;
                 font-size: 1rem;
                 font-weight: 600;
-                box-shadow: 0 8px 32px 0 rgba(254,220,184, 0.4);
-            }   
+                box-shadow: 0 8px 32px 0 rgba(254, 220, 184, 0.4);
+            }
         }
     }
 

@@ -1,27 +1,21 @@
 import "./SinglePost.scss";
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import Maps from "../Maps/Maps.js";
 
-function SinglePost({id}) {
-    const [postData, setPostData] = useState({});
-   
 
-    useEffect( () => {
-        axios.get(`http://localhost:8080/location/${id}`)
-        .then((response) => {
-            setPostData(response.data);
-        })
-    }, [id])
 
+function SinglePost({ postData }) {
 
     return (
-        <div className='single-post__container'>
-            <h3 className='single-post__container-title'>{postData.location_name}</h3>
-            <h3 className='single-post__container-title'>{postData.address}</h3>
-            <h3 className='single-post__container-title'>{postData.city}</h3>
-            <h3 className='single-post__container-title'>{postData.level}</h3>
-            <a href={postData.registration} className='single-post__container-title'>Click Here to Register</a>
+        <div className="single-post__container">
+            <div className='single-post__container__detail'>
+                <h2 className='single-post__container__detail-title single-post__container__detail-header'>{postData.location_name}</h2>
+                <h3 className='single-post__container__detail-title'>{postData.address}</h3>
+                <h3 className='single-post__container__detail-title'>{postData.city}</h3>
+                <h3 className='single-post__container__detail-title'>{postData.level}</h3>
+                <a href={postData.registration} className='single-post__container__detail-title'>Click Here to Register</a>
+            </div>
         </div>
+
     )
 }
 

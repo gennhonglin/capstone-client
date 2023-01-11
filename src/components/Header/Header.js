@@ -1,4 +1,5 @@
 import "./Header.scss";
+import Logo from "../../assets/images/GHLVolley.png";
 import { Link } from "react-router-dom";
 import Home  from "../../assets/icons/home-outline.svg";
 import Chat from "../../assets/icons/chatbox-outline.svg";
@@ -13,18 +14,21 @@ function Header({image}) {
     if(image) {
         navDisplay = <li className="navigation__list-item">
         <span className="navigation__list-item__span"><img className="navigation__list-item__mohan" src={Mohan} alt="Profile icon" /></span>
-        <span className="navigation__list-item__span navigation__list-item__title">Profile</span>
+        <span className="navigation__list-item__span navigation__list-item__title"><Link className="navigation__list-item__title-link" to={'/profile'}>Profile</Link></span>
         </li>;
     } else {
         navDisplay = <li className="navigation__list-item">
         <span className="navigation__list-item__span"><img className="navigation__list-item__icon" src={Profile} alt="Profile icon" /></span>
-        <span className="navigation__list-item__span navigation__list-item__title">Profile</span>
+        <span className="navigation__list-item__span navigation__list-item__title"><Link className="navigation__list-item__title-link" to={'/profile'}>Profile</Link></span>
         </li>;
     }
 
 
     return(
         <nav className="navigation">
+            <div className="navigation__logo">
+                <img className="navigation__logo-img" alt="GHLVolley Logo" src={Logo}/>
+            </div>
             <ul className="navigation__list">
                 <li className="navigation__list-item">
                     <span className="navigation__list-item__span"><img className="navigation__list-item__icon" src={Home} alt="home icon" /></span>

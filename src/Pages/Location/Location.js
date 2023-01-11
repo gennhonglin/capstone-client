@@ -9,8 +9,10 @@ import DisplayUser from "../../components/DisplayUser/DisplayUser";
 function Location() {
     const token = sessionStorage.getItem("token");
     let image = sessionStorage.getItem("image");
-    if(image === null) {
+    if (image === null) {
         image = true;
+    } else {
+        image = false;
     }
 
     const initialState = {
@@ -27,14 +29,19 @@ function Location() {
 
     return (
         <div className="location">
-            <DisplayUser token = {token} />
-            <div className="location__maps">
-                <Maps location={location} />
+            <div className="location__header">
+                <Header image={image} />
+                <DisplayUser token={token} />
             </div>
-            <div className="location__posts">
-                <Posts addressCallBack = {handleCallBack} />
+            <div className="location__container">
+                <div className="location__container-maps">
+                    <Maps location={location} />
+                </div>
+                <div className="location__container-posts">
+                    <Posts addressCallBack={handleCallBack} />
+                </div>
             </div>
-            <Header image = {image}/>
+
         </div>
     )
 }
