@@ -7,18 +7,21 @@ function Profile() {
     const token = sessionStorage.getItem("token");
     let image = sessionStorage.getItem("image");
 
-    if(token === "guest" || token === null) {
+    if (token === "guest" || token === null) {
         image = true;
     } else {
         image = false;
     }
 
 
-    return(
+    return (
         <div className="profile">
-            <DisplayUser token = {token} />
-            <ProfileCard />
-            <Header image = {image}/>
+            <DisplayUser token={token} />
+            <div className="profile__container">
+                <ProfileCard />
+            </div>
+
+            <Header image={image} />
         </div>
     )
 }

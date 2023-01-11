@@ -1,4 +1,32 @@
+@use "../../Styles/partials/mixins" as responsive;
+
 .location {
     min-height: 100vh;
     background-color: #2E496A;
+    display: flex;
+    flex-direction: column;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+        @include responsive.tablet {
+            padding-top: 3.125rem;
+            display: flex;
+            flex-direction: row;
+        }
+        &-maps {
+            @include responsive.tablet {
+                width: 50%;
+                height: 100vh;
+            }
+        }
+
+        &-posts {
+            @include responsive.tablet {
+                width: 50%;
+                height: 100vh;
+            }
+        }
+    }
 }

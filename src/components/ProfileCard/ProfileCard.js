@@ -9,14 +9,22 @@ import { Link } from "react-router-dom";
 function ProfileCard() {
     const token = sessionStorage.getItem("token");
     let display;
-    let user = jwt_decode(token);
+    let user;
+    if(token !== "guest") {
+        user = jwt_decode(token);
+    }
     const [selectedUser, setSelectedUser] = useState("");
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/player/${user.data.id}`)
-        .then((result) => {
-            setSelectedUser(result.data);
-        })
+        if(token !== 'guest') {
+            axios.get(`http://localhost:8080/player/${user.data.id}`)
+            .then((result) => {
+                setSelectedUser(result.data);
+            }).catch((err) => {
+                return err;
+            })
+        }
+
     }, [])
 
     let checkDataNull = (info) => {

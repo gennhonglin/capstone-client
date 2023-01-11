@@ -7,7 +7,7 @@ function EditProfile() {
     const token = sessionStorage.getItem("token");
     let image = sessionStorage.getItem("image");
 
-    if(token === "guest" || token === null) {
+    if (token === "guest" || token === null) {
         image = true;
     } else {
         image = false;
@@ -15,9 +15,11 @@ function EditProfile() {
 
     return (
         <div className="edit-profile">
-            <DisplayUser token = {token} />
-            <EditProfileForm />
-            <Header image = {image}/>
+            <DisplayUser token={token} />
+            <div className="edit-profile__container">
+                <EditProfileForm />
+            </div>
+            <Header image={image} />
         </div>
     )
 }

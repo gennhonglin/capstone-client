@@ -1,4 +1,11 @@
+@use "../../Styles/partials/mixins" as responsive;
 .edit-profile {
     min-height: 100vh;
     background-color: #2E496A;
+
+    &__container {
+        @include responsive.tablet {
+            padding-top: 4rem;
+        }
+    }
 }
