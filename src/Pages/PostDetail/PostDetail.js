@@ -14,7 +14,7 @@ function PostDetail() {
     const token = sessionStorage.getItem("token");
     const { id } = useParams();
     let image = sessionStorage.getItem("image");
-    if (image !== null) {
+    if (image === null) {
         image = true;
     } else {
         image = false;

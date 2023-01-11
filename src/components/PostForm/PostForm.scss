@@ -1,7 +1,15 @@
+@use "../../Styles/partials/mixins" as responsive;
+
 .post-form {
     padding-right: 1rem;
     padding-left: 1rem;
     transform: translateY(40%);
+    display: flex;
+
+
+    @include responsive.tablet {
+        justify-content: center;
+    }
 
 
     &__container {
@@ -14,6 +22,11 @@
         -webkit-backdrop-filter: blur(4px);
         border-radius: 10px;
         border: 1px solid rgba(255, 255, 255, 0.18);
+
+        @include responsive.tablet {
+            width: 40%;
+            padding: 1.5625rem;
+        }
 
         &__header {
             display: flex;
