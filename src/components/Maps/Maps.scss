@@ -1,0 +1,13 @@
+@use "../../Styles/partials/mixins" as responsive;
+@import '~maplibre-gl/dist/maplibre-gl.css';
+
+
+.map-container {
+    height: 25rem;
+
+    @include responsive.tablet {
+        min-height: 100vh;
+        z-index: 0;
+    }
+
+}

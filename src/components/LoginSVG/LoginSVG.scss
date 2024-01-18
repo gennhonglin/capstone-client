@@ -1,0 +1,55 @@
+@use "../../Styles/partials/mixins" as responsive;
+
+.login-svg {
+    display: none;
+
+    @include responsive.tablet {
+        display: block;
+        width: 50%;
+    }
+
+    &__image {
+        @include responsive.tablet {
+            display: block;
+            height: 32.25rem;
+            width: 31.25rem;
+            transform: translateX(-3.125rem);
+
+            #Volleyball {
+                animation: ball 1s linear infinite;
+                transform-origin: center;
+                transform-box: fill-box;
+            }
+
+            #Person-Body {
+                animation: person 1s ease-in-out infinite alternate;
+                transform-origin: top;
+            }
+
+        }
+
+        @include responsive.desktop {
+            transform: translateX(0);
+            height: 43.75rem;
+            width: 43.75rem;
+        }
+    }
+}
+
+@keyframes ball {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes person {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(20deg);
+    }
+}

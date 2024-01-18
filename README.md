@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# GHLVOLLEY - Volleyball Resource Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An all in one resource, chat and location based volleyball website created with Node.js, Express, React, HTML, CSS, Javascript and mySQL
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+* [General Info] (#general-info)
+* [Technologies] (#technologies)
+* [Setup] (#setup)
+* [Usage] (#usage)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## General Info
+What this project aims to do is to give Beginners and Intermediate Volleyball players an all in one resource place for anything volleyball related. The reason that I chose to make this my project is because I really wanted to give back to the volleyball community and find a way to help everyone improve in some way. When I first started playing volleyball I found that finding videos/content about volleyball was really difficult as I had to scramble to find realiable resources in improving my gameplay and game knowledge. I made this website in mind to help beginners like myself, have a place to have all those resources already sorted and available for everyone, while also being able to find new places in their city to play at, while also potentially in the future to be able to talk to experienced players that are willing to help coach and improve their gameplays.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies
+Project is created with:
+* React Version: 18.2.0
+* HTML 5
+* CSS 3
+* Node.js Version: 18.12.1
+* Express Version: 4.18.2
+* mySQL Version: 8.0
+* SASS Version: 1.56.2
 
-### `npm test`
+## Setup 
+To run this project, install it locally using npm:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+cd ../ghl-volley-client
+npm install
 
-### `npm run build`
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+After cloning the repo to wherever you want on your computer, go to its root directory and run npm install to install its dependencies.
+Once the dependencies are installed, you can run npm start to start the application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

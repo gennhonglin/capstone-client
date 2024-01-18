@@ -1,0 +1,38 @@
+@use "../../Styles/partials/mixins" as responsive;
+
+.single-post {
+    background-color: #2E496A;
+    min-height: 100vh;
+
+    &__body {
+
+        @include responsive.tablet {
+            padding-top: 3.125rem;
+            display: flex;
+        }
+        
+        &-left {
+            @include responsive.tablet {
+                width: 50%;
+            }
+
+            &__maps {
+                @include responsive.tablet {
+                    height: 100vh;
+                }
+            }
+        }
+
+        &-right {
+            @include responsive.tablet {
+                width: 50%;
+            }
+            &__posts {
+                padding-left: 1rem;
+                padding-right: 1rem;
+
+            }
+        }
+
+    }
+}

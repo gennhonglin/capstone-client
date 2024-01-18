@@ -1,0 +1,83 @@
+.posts {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    &__header {
+        padding-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+
+        &-title {
+            margin: 0;
+            border: .1875rem solid #e8dfca;
+            color: #e8dfca;
+            padding: .3125rem;
+            border-radius: .3125rem;
+        }
+
+        &__button {
+            padding-top: 1rem;
+
+            &-link {
+                text-decoration: none;
+                border: none;
+                border-radius: 1.25rem;
+                background-color: #aebdca;
+                color: #2E496A;
+                font-weight: 600;
+                padding: .5rem;
+            }
+        }
+    }
+
+
+    &__location {
+        padding-top: 1rem;
+        padding-bottom: 4.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        &-post {
+            display: flex;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.85);
+            box-shadow: 0 8px 32px 0 rgba(133, 133, 179, 0.753);
+            backdrop-filter: blur(0px);
+            -webkit-backdrop-filter: blur(0px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            &__details {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                width: 70%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+
+                &-title {
+                    color: #01539D;
+                    text-align: left;
+                    font-size: 1rem;
+                    margin: 0;
+                }
+
+                &-level {
+                    color: #01539D;
+                    text-align: left;
+                    font-size: .8125rem;
+                    margin: 0;
+                }
+            }
+
+            &__link {
+                transform: translateY(100%);
+                height: 1.875rem;
+                width: 1.875rem;
+            }
+        }
+    }
+}
