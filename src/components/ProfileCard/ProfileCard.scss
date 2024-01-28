@@ -77,6 +77,12 @@
                         @include responsive.tablet {
                             height: 12.5rem;
                         }
+
+                        @include responsive.desktop {
+                            height: 17.1875rem;
+                        }
+
+                        
                     }
                 }
 

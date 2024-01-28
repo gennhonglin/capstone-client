@@ -1,5 +1,5 @@
 import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
-import './App.css';
+import './App.scss';
 import AddPost from "./Pages/AddPost/AddPost";
 import EditProfile from "./Pages/EditProfile/EditProfile";
 import Homepage from "./Pages/Homepage/Homepage";

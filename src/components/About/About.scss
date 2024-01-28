@@ -1,0 +1,53 @@
+@use "../../Styles/partials/mixins" as responsive;
+
+.about {
+    transform: translateY(-2.375rem);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 31.25rem;
+    padding: 1rem;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+
+    @include responsive.tablet {
+        transform: translateY(-3.375rem);
+        height: 31.25rem;
+        padding: 2rem;
+    }
+
+    @include responsive.desktop {
+        transform: translateY(-4.6875rem);
+        height: 31.25rem;
+        padding: 4rem;
+    }
+
+    &__title {
+        color: white;
+        margin: 0;
+        padding-top: 1rem;
+        font-size: 1.5rem;
+
+        @include responsive.tablet {
+            font-size: 2rem;
+        }
+
+        @include responsive.desktop {
+            font-size: 3rem;
+        }
+    
+    }
+
+    &__description {
+        text-align: left;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: peachpuff;
+
+        @include responsive.tablet {
+            font-size: 1.25rem;
+            line-height: 2rem;
+        }
+    }
+
+
+}

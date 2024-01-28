@@ -27,7 +27,7 @@ function Header({image}) {
     return(
         <nav className="navigation">
             <div className="navigation__logo">
-                <img className="navigation__logo-img" alt="GHLVolley Logo" src={Logo}/>
+                <Link to={'/homepage'}><img className="navigation__logo-img" alt="GHLVolley Logo" src={Logo}/></Link>
             </div>
             <ul className="navigation__list">
                 <li className="navigation__list-item">

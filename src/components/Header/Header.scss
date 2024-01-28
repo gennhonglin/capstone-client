@@ -15,7 +15,7 @@
     z-index: 1;
 
     @include responsive.tablet {
-        overflow: auto;
+        overflow: hidden;
         top: 1.5rem;
         position: absolute;
         bottom: auto;
@@ -24,12 +24,19 @@
 
     &__logo {
         &-img {
+            overflow: hidden;
             display: none;
 
             @include responsive.tablet {
                 display: block;
                 height: 10.625rem;
                 width: 12.5rem;
+            }
+
+            @include responsive.desktop {
+                overflow: hidden;
+                height: 15.625rem;
+                width: 15.625rem;
             }
         }
     }
@@ -44,6 +51,10 @@
 
         @include responsive.tablet {
             width: 30%;
+        }
+
+        @include responsive.desktop {
+            width: 20%;
         }
 
         &-item {

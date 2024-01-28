@@ -13,6 +13,18 @@ function DisplayUser({token}) {
         username = display.data.name;
     }
 
+    function checkUser(username) {
+        let log;
+
+        if(username === "Guest") {
+            log = <Link onClick={() => {clearStorage()}} className="display-user__container-logout" to={'/login'}>Login</Link>;
+            return log;
+        } else {
+            log = <Link onClick={() => {clearStorage()}} className="display-user__container-logout" to={'/login'}>Logout</Link>;
+            return log;
+        }
+    }
+
 
     const clearStorage = () => {
         sessionStorage.clear();
@@ -22,7 +34,7 @@ function DisplayUser({token}) {
         <div className="display-user">
             <div className="display-user__container">
                 <p className="display-user__container-player">Welcome {username}</p>
-                <Link onClick={() => {clearStorage()}} className="display-user__container-logout" to={'/login'}>Logout</Link>
+                {checkUser(username)}
             </div>
         </div>
     )
